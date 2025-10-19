@@ -1,0 +1,28 @@
+$font-padrao: Roboto, sans-serif;
+$font-secundaria: Inter, sans-serif;
+$font-bold: bold;
+$font-medium: 500;
+$background: #fff;
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-padrao;
+}
+
+body {
+    min-height: 100vh;
+    min-width: 100vw;
+    background-color: $background;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: inherit;
+  
+    
+}
+
