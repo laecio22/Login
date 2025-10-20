@@ -3,7 +3,12 @@ $font-secundaria: Inter, sans-serif;
 $font-bold: bold;
 $font-medium: 500;
 $background: #fff;
+$backgroundSize: cover;
 
+@mixin gerarBackground($backgroundImage, $backgroundSize) {
+  background-image: $backgroundImage;
+  background-size: $backgroundSize;
+}
 
 * {
   margin: 0;
@@ -13,16 +18,66 @@ $background: #fff;
 }
 
 body {
-    min-height: 100vh;
-    min-width: 100vw;
-    background-color: $background;
+  min-height: 100vh;
+  min-width: 100vw;
+  background-color: $background;
 }
 
 main {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    min-height: inherit;
-  
-    
-}
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  min-height: inherit;
 
+  .section-image {
+    @include gerarBackground(url("./assets/floresta.jpg"), $backgroundSize);
+  }
+
+  .section-login {
+    .container-form {
+     
+      box-shadow: 0 0 20px rgb(0, 0, 0, 0.4);
+      width: 500px;
+      margin: 120px auto 50px;
+     
+
+      padding: 55px;
+      h1 {
+        text-align: center;
+      }
+    }
+
+    form {
+      input {
+        display: block;
+        width: 100%;
+        height: 50px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+        font-size: 16px;
+        padding: 10px;
+        border-radius: 8px;
+        border: 1px solid #ccc;
+      }
+
+      button {
+        display: block;
+        width: 100%;
+        padding: 14px;
+        margin-top: 20px;
+        background-color: rgb(65, 142, 244);
+        color: #fff;
+        border-radius: 8px;
+        border: none;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s;
+
+        &:hover {
+          background-color: #1482c2;
+        }
+      }
+
+    
+    }
+  }
+}

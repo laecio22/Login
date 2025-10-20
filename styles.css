@@ -15,4 +15,44 @@ main {
   display: grid;
   grid-template-columns: 1fr 1fr;
   min-height: inherit;
+}
+main .section-image {
+  background-image: url("./assets/floresta.jpg");
+  background-size: cover;
+}
+main .section-login .container-form {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  width: 500px;
+  margin: 120px auto 50px;
+  padding: 55px;
+}
+main .section-login .container-form h1 {
+  text-align: center;
+}
+main .section-login form input {
+  display: block;
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+main .section-login form button {
+  display: block;
+  width: 100%;
+  padding: 14px;
+  margin-top: 20px;
+  background-color: rgb(65, 142, 244);
+  color: #fff;
+  border-radius: 8px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+main .section-login form button:hover {
+  background-color: #1482c2;
 }/*# sourceMappingURL=styles.css.map */
